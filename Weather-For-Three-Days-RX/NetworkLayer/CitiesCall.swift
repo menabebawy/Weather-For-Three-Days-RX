@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import Endpoints
+
+struct CitiesCall: Call {
+    typealias Parser = JSONParser<Cities>
+
+    var ids: String
+
+    var request: URLRequestEncodable {
+        return Request(.get, "group", query: ["id": ids, "APPID": "7764fcb1cae95e2051b8d0bba8c7d962"])
+    }
+}

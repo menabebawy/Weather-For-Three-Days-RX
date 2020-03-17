@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+final class CitiesViewModel {
+
+    func requestCities() {
+        CitiesCall(ids: Cities.ids()).start { result in
+            result.onSuccess { cities in
+            }.onError { error in
+            }
+        }
+    }
+
+}

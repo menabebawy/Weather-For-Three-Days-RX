@@ -6,6 +6,7 @@
 //  Copyright © 2020 Mena. All rights reserved.
 //
 
+import Foundation
 
 public struct DateAdapter {
     private let dateAdaptee: DateAdaptee

@@ -6,4 +6,15 @@
 //  Copyright © 2020 Mena. All rights reserved.
 //
 
-import Foundation
+import Endpoints
+
+extension Call {
+
+    func start(completion: @escaping (Result<Parser.OutputType>)->()) {
+        let client = WeatherClient()
+        let session = Session(with: client)
+
+        session.start(call: self, completion: completion)
+    }
+
+}

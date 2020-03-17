@@ -8,23 +8,28 @@
 
 import UIKit
 
-class CitiesViewController: UIViewController {
+final class CitiesViewController: UIViewController {
+    @IBOutlet weak private var tableView: UITableView!
+
+    private var cities: [City] = []
+    private var viewModel = CitiesViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        viewModel.requestCities()
     }
 
+}
 
-    /*
-    // MARK: - Navigation
+// MARK: - Table view data source
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension CitiesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cities.count
     }
-    */
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 
 }
