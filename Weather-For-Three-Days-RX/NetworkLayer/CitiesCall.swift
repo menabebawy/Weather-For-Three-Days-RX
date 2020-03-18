@@ -15,6 +15,8 @@ struct CitiesCall: Call {
     var ids: String
 
     var request: URLRequestEncodable {
-        return Request(.get, "group", query: ["id": ids, "APPID": "7764fcb1cae95e2051b8d0bba8c7d962"])
+        return Request(.get, "group", query: ["id": ids,
+                                              "units": "metric",
+                                              "APPID": "7764fcb1cae95e2051b8d0bba8c7d962"])
     }
 }

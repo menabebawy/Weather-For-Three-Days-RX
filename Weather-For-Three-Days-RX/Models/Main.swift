@@ -16,5 +16,9 @@ public struct Main: Decodable {
     enum CodingKeys: String, CodingKey {
         case temperature = "temp"
     }
+
+    func celsiusTemperature() -> String {
+        String(format: "%.0f", temperature) + "º"
+    }
     
 }

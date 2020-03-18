@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CitiesViewController" customModule="Weather_For_Three_Days_RX" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="z2u-D2-Upp" id="04z-7e-Enm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,8 +22,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="Ysg-Ln-4KR"/>
-                        <outlet property="delegate" destination="-1" id="n13-eq-F2J"/>
+                        <outlet property="delegate" destination="-1" id="UKZ-eh-9Xa"/>
                     </connections>
                 </tableView>
             </subviews>

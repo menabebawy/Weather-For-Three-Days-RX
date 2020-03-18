@@ -1,0 +1,33 @@
+//
+//  CitiesViewModel.swift
+//  Weather-For-Three-Days-RX
+//
+//  Created by user165891 on 3/17/20.
+//  Copyright © 2020 Mena. All rights reserved.
+//
+
+import Foundation
+import RxSwift
+
+struct CitiesViewModel {
+    private let citiesSubject = PublishSubject<[CitiesSection]>()
+    var citiesObservable: Observable<[CitiesSection]> {
+        return citiesSubject.asObserver()
+    }
+
+    private let errorMessageSubject = PublishSubject<String>()
+    var errorMessageObservable: Observable<String> {
+        return errorMessageSubject.asObservable()
+    }
+
+    func requestCities() {
+        CitiesCall(ids: Cities.ids()).start { result in
+            result.onSuccess { cities in
+                self.citiesSubject.onNext([CitiesSection(header: "Cities", items: cities.list)])
+            }.onError { error in
+                self.errorMessageSubject.onNext(error.localizedDescription)
+            }
+        }
+    }
+
+}
