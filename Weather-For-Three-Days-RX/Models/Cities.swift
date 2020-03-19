@@ -1,8 +1,8 @@
 //
 //  Cities.swift
-//  Entities
+//  Weather-For-Three-Days-RX
 //
-//  Created by user165891 on 2/6/20.
+//  Created by Mena Bebawy on 2/6/20.
 //  Copyright © 2020 Mena. All rights reserved.
 //
 
