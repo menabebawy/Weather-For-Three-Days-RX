@@ -17,9 +17,14 @@ final class CitiesViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private let dataSource = CitiesDataSource()
 
+    private let selectedCityPublishSubject = PublishSubject<City>()
+    var selectedCityObservable: Observable<City> {
+        return selectedCityPublishSubject.asObserver()
+    }
+
     override func loadView() {
         super.loadView()
-        title = "Weather App"
+        title = "Weather Rx App"
         viewModel.requestCities()
 
         viewModel.citiesObservable
@@ -29,6 +34,12 @@ final class CitiesViewController: UIViewController {
         dataSource.titleForHeaderInSection = { dataSource, index in
             dataSource.sectionModels[index].header
         }
+
+        tableView.rx
+            .modelSelected(City.self)
+            .subscribe(onNext: { [weak self] city in
+                self?.selectedCityPublishSubject.onNext(city) })
+            .disposed(by: disposeBag)
     }
 
     override func viewDidLoad() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 final class CitiesCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
@@ -19,7 +20,11 @@ final class CitiesCoordinator: Coordinator {
     func start() {
         let nibName = String(describing: CitiesViewController.self)
         let citiesViewController = CitiesViewController(nibName: nibName, bundle: .main)
-//        citiesViewController.delegate = self
+        citiesViewController.selectedCityObservable
+            .subscribe(onNext: { [weak self] city in
+                guard let `self` = self else { return }
+                CityForecasCoordinator(navigationController: self.navigationController, city: city).start()
+            })
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.viewControllers = [citiesViewController]
     }

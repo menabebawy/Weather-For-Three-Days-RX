@@ -21,7 +21,7 @@ struct CitiesViewModel {
     }
 
     func requestCities() {
-        CitiesCall(ids: Cities.ids()).start { result in
+        RequestCall<Cities>(parameters: ["id": Cities.ids()], path: "group").start { result in
             result.onSuccess { cities in
                 self.citiesSubject.onNext([CitiesSection(header: "Cities", items: cities.list)])
             }.onError { error in

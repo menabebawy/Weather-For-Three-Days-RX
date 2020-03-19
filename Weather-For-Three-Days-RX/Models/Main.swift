@@ -18,7 +18,19 @@ public struct Main: Decodable {
     }
 
     func celsiusTemperature() -> String {
-        String(format: "%.0f", temperature) + "º"
+        toString(tem: temperature)
+    }
+
+    func celsiusMin() -> String {
+        toString(tem: temperature)
+    }
+
+    func celsiusMax() -> String {
+        toString(tem: max)
+    }
+
+    private func toString(tem: Float) -> String {
+        String(format: "%.0f", tem) + "º"
     }
     
 }
