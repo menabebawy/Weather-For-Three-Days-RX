@@ -15,21 +15,21 @@ final class CityForecastViewController: UIViewController {
     private let viewModel = CityForecastViewModel()
     private let dataSource = CityForecastDataSource()
     private let disposeBag = DisposeBag()
-    
+
     var city: City!
-    
+
     override public func loadView() {
         super.loadView()
         title = city.name
 
         viewModel.hourlyForecastObservable
-            .subscribe(onNext: { [weak self] forcasts in
+            .subscribe(onNext: { [weak self] _ in
                 self?.tableView.reloadRows(at: [IndexPath(row: 0, section: 1)], with: .none)
             })
             .disposed(by: disposeBag)
 
         viewModel.nextDaysForecastObservable
-            .subscribe(onNext: { [weak self] forcasts in
+            .subscribe(onNext: { [weak self] _ in
                 self?.tableView.reloadSections([2], with: .none)
             })
             .disposed(by: disposeBag)
@@ -44,7 +44,7 @@ final class CityForecastViewController: UIViewController {
 
         viewModel.requestForecast(by: city)
     }
-    
+
     override public func viewDidLoad() {
         super.viewDidLoad()
 
@@ -56,7 +56,7 @@ final class CityForecastViewController: UIViewController {
         tableView.register(NextDayTableViewCell.nib(),
                            forCellReuseIdentifier: NextDayTableViewCell.identifier)
     }
-    
+
 }
 
 // MARK: - Table view delegate
@@ -72,5 +72,5 @@ extension CityForecastViewController: UITableViewDelegate {
             return NextDayTableViewCell.height
         }
     }
-    
+
 }

@@ -30,7 +30,7 @@ struct CityForecastViewModel {
         RequestCall<Forecasts>(parameters: ["id": "\(city.id)"], path: "forecast").start { result in
             result.onSuccess { forecasts in
                 self.fetchedForecasts(forecasts.list, city: city)
-            }.onError { error in
+            }.onError { _ in
 
             }
         }
@@ -43,7 +43,6 @@ struct CityForecastViewModel {
         // Assign dateAdapter property
         forecasts.mutateEach { $0.dateAdapter = DateAdapter(
             dateAdaptee: DateAdaptee(since1970: $0.date, timeZone: timeZone)) }
-
 
         // Update next 3 days
         let nextOneDayResult = forecasts.filter { $0.isNext(daysValue: 1) }
@@ -64,7 +63,7 @@ struct CityForecastViewModel {
 
     private func nextDayForecast(for forecasts: [Forecast]) -> Forecast {
         var newForecast = forecasts.first!
-        let temperatures = forecasts.map( { $0.main.temperature })
+        let temperatures = forecasts.map { $0.main.temperature }
         newForecast.main.min = temperatures.sorted(by: <).first!
         newForecast.main.max = temperatures.sorted(by: >).first!
         return newForecast

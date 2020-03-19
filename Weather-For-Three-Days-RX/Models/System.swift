@@ -10,7 +10,7 @@ import Foundation
 
 public struct System: Decodable {
     public let timeZone: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case timeZone = "timezone"
     }

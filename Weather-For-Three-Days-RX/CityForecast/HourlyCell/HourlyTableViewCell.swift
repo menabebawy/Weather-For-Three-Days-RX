@@ -10,26 +10,26 @@ import UIKit
 
 final class HourlyTableViewCell: UITableViewCell {
     @IBOutlet weak private var collectionView: UICollectionView!
-    
+
     private var forecasts: [Forecast] = [] {
         didSet {
             collectionView.reloadData()
         }
     }
-    
+
     static let identifier = "HourlyCell"
     static let height: CGFloat = 100
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.register(HourCollectionViewCell.nib(),
                                 forCellWithReuseIdentifier: HourCollectionViewCell.identifier)
     }
-    
+
     func configure(forecasts: [Forecast]) {
         self.forecasts = forecasts
     }
-    
+
 }
 
 // MARK: - Collection view data source
@@ -38,18 +38,18 @@ extension HourlyTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return forecasts.count
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: HourCollectionViewCell.identifier,
-            for: indexPath) as? HourCollectionViewCell else {
+            withReuseIdentifier: HourCollectionViewCell.identifier, for: indexPath) as? HourCollectionViewCell else {
                 return UICollectionViewCell()
         }
-        
+
         cell.configure(forecasts[indexPath.row])
         return cell
     }
-    
+
 }
 
 // MARK: - Collection view delegate flow layout

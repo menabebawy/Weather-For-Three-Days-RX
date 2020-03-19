@@ -21,7 +21,8 @@ final class CityForecastDataSource: RxTableViewSectionedReloadDataSource<Section
             switch item {
             case .current(let city):
                 guard let cell = tableView.dequeueReusableCell(
-                    withIdentifier: CurrentTemperatureTableViewCell.identifier, for: indexPath) as? CurrentTemperatureTableViewCell else {
+                    withIdentifier: CurrentTemperatureTableViewCell.identifier,
+                    for: indexPath) as? CurrentTemperatureTableViewCell else {
                         return UITableViewCell()
                 }
                 cell.configure(city: city)

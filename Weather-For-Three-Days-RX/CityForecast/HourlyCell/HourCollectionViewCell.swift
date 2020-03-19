@@ -12,10 +12,10 @@ final class HourCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var houreLabel: UILabel!
     @IBOutlet weak private var temperatureImageView: UIImageView!
     @IBOutlet weak private var temperatureLabel: UILabel!
-    
+
     static let identifier = "HourCell"
     static let width: CGFloat = 80
-    
+
     func configure(_ forecast: Forecast) {
         houreLabel.text = forecast.hour
         temperatureLabel.text = forecast.main.celsiusTemperature()

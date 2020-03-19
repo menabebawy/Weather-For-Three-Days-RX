@@ -8,6 +8,7 @@ target 'Weather-For-Three-Days-RX' do
   pod 'RxCocoa', '~> 5'
   pod 'RxDataSources', '~> 4.0'
   pod 'Kingfisher', '~> 5.0'
+  pod 'SwiftLint', '0.39.1'
   pod 'Endpoints'
 
 end

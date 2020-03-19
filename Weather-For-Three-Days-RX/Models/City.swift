@@ -15,7 +15,7 @@ public struct City: Decodable {
     public let name: String
     public let weather: [Weather]
     public let main: Main
-    
+
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case system = "sys"

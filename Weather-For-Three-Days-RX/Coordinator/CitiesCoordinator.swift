@@ -12,11 +12,12 @@ import RxSwift
 final class CitiesCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     unowned let navigationController: UINavigationController
-    
+    private let disposeBag = DisposeBag()
+
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
+
     func start() {
         let nibName = String(describing: CitiesViewController.self)
         let citiesViewController = CitiesViewController(nibName: nibName, bundle: .main)
@@ -25,24 +26,9 @@ final class CitiesCoordinator: Coordinator {
                 guard let `self` = self else { return }
                 CityForecasCoordinator(navigationController: self.navigationController, city: city).start()
             })
+            .disposed(by: disposeBag)
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.viewControllers = [citiesViewController]
     }
 
 }
-
-// MARK: - Cities module view controller delegate
-
-//extension CitiesModuleCoordinator: CitiesModuleViewControllerDelegate {
-//    func citiesModuleViewController(_ controller: CitiesModuleViewController, didSelectCity city: City) {
-//        let forecastModuleCoordinator = ForecastModuleCoordinator(navigationController: navigationController)
-//        forecastModuleCoordinator.city = city
-//        forecastModuleCoordinator.start()
-//    }
-//    
-//    func citiesModuleViewController(_ controller: CitiesModuleViewController,
-//                                    showErrorAlertWithMessage message: String) {
-//        navigationController.viewControllers[0].showErrorAlertController(withMessage: message)
-//    }
-//    
-//}

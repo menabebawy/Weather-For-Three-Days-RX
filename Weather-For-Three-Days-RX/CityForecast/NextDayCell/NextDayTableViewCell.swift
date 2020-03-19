@@ -12,7 +12,7 @@ final class NextDayTableViewCell: UITableViewCell {
     @IBOutlet weak private var dayLabel: UILabel!
     @IBOutlet weak private var minTemperaturrLabel: UILabel!
     @IBOutlet weak private var maxTemperatureLabel: UILabel!
-    
+
     static let identifier = "NextDayCell"
     static let height: CGFloat = 60
 

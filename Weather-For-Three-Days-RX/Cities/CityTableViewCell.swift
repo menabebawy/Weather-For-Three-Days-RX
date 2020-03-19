@@ -13,10 +13,10 @@ final class CityTableViewCell: UITableViewCell {
     @IBOutlet weak private var cityNameLabel: UILabel!
     @IBOutlet weak private var tempratureLabel: UILabel!
     @IBOutlet weak private var weatherImageView: UIImageView!
-    
+
     static let identifier = "CityCell"
     static let height: CGFloat = 80
-    
+
     func configure(city: City) {
         cityNameLabel.text = city.name
         tempratureLabel.text = city.main.celsiusTemperature()

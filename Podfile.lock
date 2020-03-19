@@ -14,6 +14,7 @@ PODS:
   - RxRelay (5.0.1):
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
+  - SwiftLint (0.39.1)
 
 DEPENDENCIES:
   - Endpoints
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - RxCocoa (~> 5)
   - RxDataSources (~> 4.0)
   - RxSwift (~> 5)
+  - SwiftLint (= 0.39.1)
 
 SPEC REPOS:
   trunk:
@@ -31,6 +33,7 @@ SPEC REPOS:
     - RxDataSources
     - RxRelay
     - RxSwift
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
@@ -40,7 +43,8 @@ SPEC CHECKSUMS:
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 192147e073f37c2d9145d0dc7c34f94a72840846
+PODFILE CHECKSUM: 3347b291aee9e2a6bacd2fd21d3ac4c84b38d443
 
 COCOAPODS: 1.8.4
