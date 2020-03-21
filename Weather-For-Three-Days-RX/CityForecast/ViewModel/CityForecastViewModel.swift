@@ -11,27 +11,31 @@ import RxDataSources
 
 struct CityForecastViewModel {
     private let hourlyForecastSubject = PublishSubject<[Forecast]>()
-    private let nextDaysForecastSubject = PublishSubject<[Forecast]>()
-    private let sectionsSubject = PublishSubject<[SectionModel<String, CellModel>]>()
-
     var hourlyForecastObservable: Observable<[Forecast]> {
         hourlyForecastSubject.asObserver()
     }
 
+    private let nextDaysForecastSubject = PublishSubject<[Forecast]>()
     var nextDaysForecastObservable: Observable<[Forecast]> {
         nextDaysForecastSubject.asObserver()
     }
 
+    private let sectionsSubject = PublishSubject<[SectionModel<String, CellModel>]>()
     var sectionsObservable: Observable<[SectionModel<String, CellModel>]> {
         sectionsSubject.asObserver()
+    }
+
+    private let errorMessageSubject = PublishSubject<String>()
+    var errorMessageObservable: Observable<String> {
+        return errorMessageSubject.asObserver()
     }
 
     func requestForecast(by city: City) {
         RequestCall<Forecasts>(parameters: ["id": "\(city.id)"], path: "forecast").start { result in
             result.onSuccess { forecasts in
                 self.fetchedForecasts(forecasts.list, city: city)
-            }.onError { _ in
-
+            }.onError { error in
+                self.errorMessageSubject.onNext(error.localizedDescription)
             }
         }
     }

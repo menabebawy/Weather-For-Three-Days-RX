@@ -14,8 +14,8 @@ final class CitiesViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
 
     private var viewModel = CitiesViewModel()
-    private let disposeBag = DisposeBag()
     private let dataSource = CitiesDataSource()
+    private let disposeBag = DisposeBag()
 
     private let selectedCityPublishSubject = PublishSubject<City>()
     var selectedCityObservable: Observable<City> {
@@ -25,7 +25,16 @@ final class CitiesViewController: UIViewController {
     override func loadView() {
         super.loadView()
         title = "Weather Rx App"
-        viewModel.requestCities()
+
+        viewModel.errorMessageObservable
+            .subscribe(onNext: { [weak self] message in
+                guard let `self` = self else { return }
+                AlertControllerRx(actions: [AlertAction.action(title: "Ok")])
+                    .showAlert(from: self, title: "Error", message: message)
+                    .subscribe()
+                    .disposed(by: self.disposeBag)
+            })
+            .disposed(by: disposeBag)
 
         viewModel.citiesObservable
             .bind(to: tableView.rx.items(dataSource: dataSource))
@@ -38,8 +47,11 @@ final class CitiesViewController: UIViewController {
         tableView.rx
             .modelSelected(City.self)
             .subscribe(onNext: { [weak self] city in
-                self?.selectedCityPublishSubject.onNext(city) })
+                self?.selectedCityPublishSubject.onNext(city)
+            })
             .disposed(by: disposeBag)
+
+        viewModel.requestCities()
     }
 
     override func viewDidLoad() {

@@ -17,7 +17,7 @@ struct CitiesViewModel {
 
     private let errorMessageSubject = PublishSubject<String>()
     var errorMessageObservable: Observable<String> {
-        return errorMessageSubject.asObservable()
+        return errorMessageSubject.asObserver()
     }
 
     func requestCities() {

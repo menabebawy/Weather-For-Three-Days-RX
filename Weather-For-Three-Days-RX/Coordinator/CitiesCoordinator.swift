@@ -9,16 +9,10 @@
 import UIKit
 import RxSwift
 
-final class CitiesCoordinator: Coordinator {
-    var childCoordinators: [Coordinator] = []
-    unowned let navigationController: UINavigationController
+final class CitiesCoordinator: BaseCoordinator {
     private let disposeBag = DisposeBag()
 
-    required init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
-
-    func start() {
+    override func start() {
         let nibName = String(describing: CitiesViewController.self)
         let citiesViewController = CitiesViewController(nibName: nibName, bundle: .main)
         citiesViewController.selectedCityObservable

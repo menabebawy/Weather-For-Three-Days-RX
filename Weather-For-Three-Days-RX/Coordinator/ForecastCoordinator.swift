@@ -8,21 +8,15 @@
 
 import UIKit
 
-final class CityForecasCoordinator: Coordinator {
-    var childCoordinators: [Coordinator] = []
-    unowned let navigationController: UINavigationController
+final class CityForecasCoordinator: BaseCoordinator {
     private var city: City!
-
-    required init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
 
     convenience init(navigationController: UINavigationController, city: City) {
         self.init(navigationController: navigationController)
         self.city = city
     }
 
-    func start() {
+    override func start() {
         let nibName = String(describing: CityForecastViewController.self)
         let forecastViewController = CityForecastViewController(nibName: nibName, bundle: .main)
         forecastViewController.city = city
@@ -30,13 +24,3 @@ final class CityForecasCoordinator: Coordinator {
     }
 
 }
-
-// MARK: - Forecast module view controller
-
-//extension ForecastModuleCoordinator: ForecastModuleViewControllerDelegate {
-//    func forecastModuleViewController(_ controller: ForecastModuleViewController,
-//                                      showErrorAlertWithMessage message: String) {
-//        navigationController.topViewController?.showErrorAlertController(withMessage: message)
-//    }
-//
-//}

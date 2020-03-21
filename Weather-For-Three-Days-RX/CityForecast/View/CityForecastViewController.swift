@@ -22,6 +22,16 @@ final class CityForecastViewController: UIViewController {
         super.loadView()
         title = city.name
 
+        viewModel.errorMessageObservable
+            .subscribe(onNext: { [weak self] message in
+                guard let `self` = self else { return }
+                AlertControllerRx(actions: [AlertAction.action(title: "Ok")])
+                    .showAlert(from: self, title: "Error", message: message)
+                    .subscribe()
+                    .disposed(by: self.disposeBag)
+            })
+            .disposed(by: disposeBag)
+
         viewModel.hourlyForecastObservable
             .subscribe(onNext: { [weak self] _ in
                 self?.tableView.reloadRows(at: [IndexPath(row: 0, section: 1)], with: .none)
