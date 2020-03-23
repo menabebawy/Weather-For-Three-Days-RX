@@ -1,0 +1,6 @@
+framework module Pods_Weather_For_Three_Days_RX {
+  umbrella header "Pods-Weather-For-Three-Days-RX-umbrella.h"
+
+  export *
+  module * { export * }
+}
