@@ -11,4 +11,8 @@ target 'Weather-For-Three-Days-RX' do
   pod 'SwiftLint', '0.39.1'
   pod 'Endpoints'
 
+  target 'Weather-For-Three-Days-RXTests' do
+        inherit! :search_paths
+    end
+
 end

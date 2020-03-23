@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		206947DA014C2AA74B28FFB6 /* Pods_Weather_For_Three_Days_RXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32AE76E712E05D193D28A156 /* Pods_Weather_For_Three_Days_RXTests.framework */; };
 		5A106D37242290C3001C04BF /* CityForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A106D36242290C3001C04BF /* CityForecastViewModel.swift */; };
 		5A106D392422B927001C04BF /* CityForecastDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A106D382422B927001C04BF /* CityForecastDataSource.swift */; };
 		5A29BC68242228F500874F5B /* CitiesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A29BC67242228F500874F5B /* CitiesSection.swift */; };
@@ -21,6 +22,7 @@
 		5A29BC862422472C00874F5B /* CurrentTemperatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A29BC7A2422472C00874F5B /* CurrentTemperatureTableViewCell.swift */; };
 		5A29BC872422472C00874F5B /* CurrentTemperatureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A29BC7B2422472C00874F5B /* CurrentTemperatureTableViewCell.xib */; };
 		5A29BC882422472C00874F5B /* CityForecastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A29BC7C2422472C00874F5B /* CityForecastViewController.xib */; };
+		5A40EDC02427C1CC003F803C /* CitiesRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EDBF2427C1CC003F803C /* CitiesRequestMock.swift */; };
 		5A439BA5242133CC00624293 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A439BA4242133CC00624293 /* AppDelegate.swift */; };
 		5A439BA7242133CC00624293 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A439BA6242133CC00624293 /* SceneDelegate.swift */; };
 		5A439BAE242133CE00624293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A439BAD242133CE00624293 /* Assets.xcassets */; };
@@ -41,18 +43,31 @@
 		5A439BDB2421432B00624293 /* CitiesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A439BD82421432B00624293 /* CitiesCoordinator.swift */; };
 		5A439BDC2421432B00624293 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A439BD92421432B00624293 /* Coordinator.swift */; };
 		5A439BE32421594300624293 /* RequestCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A439BE22421594300624293 /* RequestCall.swift */; };
-		5A439BE5242167F400624293 /* Call+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A439BE4242167F400624293 /* Call+Extension.swift */; };
 		5A5570AD242216E90096B845 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5570AB242216E90096B845 /* CityTableViewCell.xib */; };
 		5A5570AE242216E90096B845 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5570AC242216E90096B845 /* CityTableViewCell.swift */; };
 		5A5570B1242218040096B845 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5570B0242218040096B845 /* UIView+Extension.swift */; };
 		5AAC7B142426197B0037AC34 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC7B132426197B0037AC34 /* BaseCoordinator.swift */; };
 		5AAC7B232426303F0037AC34 /* AlertControllerRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC7B222426303F0037AC34 /* AlertControllerRx.swift */; };
+		5AAC7B2B24263C310037AC34 /* Weather_For_Three_Days_RXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC7B2A24263C310037AC34 /* Weather_For_Three_Days_RXTests.swift */; };
+		5AAC7B3324263C550037AC34 /* CitiesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC7B3224263C550037AC34 /* CitiesViewModelTests.swift */; };
 		5AF6373224236DFA00AEBC71 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF6373124236DFA00AEBC71 /* Array+Extension.swift */; };
 		CB53C888C57089E5EB804D8D /* Pods_Weather_For_Three_Days_RX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF6246AACF40EBBAB7E388A /* Pods_Weather_For_Three_Days_RX.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5AAC7B2D24263C310037AC34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A439B99242133CC00624293 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A439BA0242133CC00624293;
+			remoteInfo = "Weather-For-Three-Days-RX";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		32AE76E712E05D193D28A156 /* Pods_Weather_For_Three_Days_RXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather_For_Three_Days_RXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA9A5317606525B480C9068 /* Pods-Weather-For-Three-Days-RX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-For-Three-Days-RX.debug.xcconfig"; path = "Target Support Files/Pods-Weather-For-Three-Days-RX/Pods-Weather-For-Three-Days-RX.debug.xcconfig"; sourceTree = "<group>"; };
+		42E5AF98E922B16CBB496543 /* Pods-Weather-For-Three-Days-RXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-For-Three-Days-RXTests.release.xcconfig"; path = "Target Support Files/Pods-Weather-For-Three-Days-RXTests/Pods-Weather-For-Three-Days-RXTests.release.xcconfig"; sourceTree = "<group>"; };
 		5A106D36242290C3001C04BF /* CityForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityForecastViewModel.swift; sourceTree = "<group>"; };
 		5A106D382422B927001C04BF /* CityForecastDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityForecastDataSource.swift; sourceTree = "<group>"; };
 		5A29BC67242228F500874F5B /* CitiesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesSection.swift; sourceTree = "<group>"; };
@@ -67,6 +82,7 @@
 		5A29BC7A2422472C00874F5B /* CurrentTemperatureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentTemperatureTableViewCell.swift; sourceTree = "<group>"; };
 		5A29BC7B2422472C00874F5B /* CurrentTemperatureTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentTemperatureTableViewCell.xib; sourceTree = "<group>"; };
 		5A29BC7C2422472C00874F5B /* CityForecastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityForecastViewController.xib; sourceTree = "<group>"; };
+		5A40EDBF2427C1CC003F803C /* CitiesRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesRequestMock.swift; sourceTree = "<group>"; };
 		5A439BA1242133CC00624293 /* Weather-For-Three-Days-RX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather-For-Three-Days-RX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A439BA4242133CC00624293 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A439BA6242133CC00624293 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,14 +105,18 @@
 		5A439BD82421432B00624293 /* CitiesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesCoordinator.swift; sourceTree = "<group>"; };
 		5A439BD92421432B00624293 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		5A439BE22421594300624293 /* RequestCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCall.swift; sourceTree = "<group>"; };
-		5A439BE4242167F400624293 /* Call+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Call+Extension.swift"; sourceTree = "<group>"; };
 		5A5570AB242216E90096B845 /* CityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 		5A5570AC242216E90096B845 /* CityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		5A5570B0242218040096B845 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		5AAC7B132426197B0037AC34 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		5AAC7B222426303F0037AC34 /* AlertControllerRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerRx.swift; sourceTree = "<group>"; };
+		5AAC7B2824263C310037AC34 /* Weather-For-Three-Days-RXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Weather-For-Three-Days-RXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AAC7B2A24263C310037AC34 /* Weather_For_Three_Days_RXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_For_Three_Days_RXTests.swift; sourceTree = "<group>"; };
+		5AAC7B2C24263C310037AC34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AAC7B3224263C550037AC34 /* CitiesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewModelTests.swift; sourceTree = "<group>"; };
 		5AF6373124236DFA00AEBC71 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		5C844456C3BF031B674AC229 /* Pods-Weather-For-Three-Days-RX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-For-Three-Days-RX.release.xcconfig"; path = "Target Support Files/Pods-Weather-For-Three-Days-RX/Pods-Weather-For-Three-Days-RX.release.xcconfig"; sourceTree = "<group>"; };
+		792C26F65342811E003DE8B9 /* Pods-Weather-For-Three-Days-RXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-For-Three-Days-RXTests.debug.xcconfig"; path = "Target Support Files/Pods-Weather-For-Three-Days-RXTests/Pods-Weather-For-Three-Days-RXTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EF6246AACF40EBBAB7E388A /* Pods_Weather_For_Three_Days_RX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather_For_Three_Days_RX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +129,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5AAC7B2524263C310037AC34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				206947DA014C2AA74B28FFB6 /* Pods_Weather_For_Three_Days_RXTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -117,6 +145,8 @@
 			children = (
 				3BA9A5317606525B480C9068 /* Pods-Weather-For-Three-Days-RX.debug.xcconfig */,
 				5C844456C3BF031B674AC229 /* Pods-Weather-For-Three-Days-RX.release.xcconfig */,
+				792C26F65342811E003DE8B9 /* Pods-Weather-For-Three-Days-RXTests.debug.xcconfig */,
+				42E5AF98E922B16CBB496543 /* Pods-Weather-For-Three-Days-RXTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -154,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				5A439BA3242133CC00624293 /* Weather-For-Three-Days-RX */,
+				5AAC7B2924263C310037AC34 /* Weather-For-Three-Days-RXTests */,
 				5A439BA2242133CC00624293 /* Products */,
 				510AB0A9E6D4CFAF353321EC /* Pods */,
 				A1B5A24E69474A6FDBB0E525 /* Frameworks */,
@@ -164,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				5A439BA1242133CC00624293 /* Weather-For-Three-Days-RX.app */,
+				5AAC7B2824263C310037AC34 /* Weather-For-Three-Days-RXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,7 +266,6 @@
 			isa = PBXGroup;
 			children = (
 				5A439BE22421594300624293 /* RequestCall.swift */,
-				5A439BE4242167F400624293 /* Call+Extension.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -292,10 +323,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5AAC7B2924263C310037AC34 /* Weather-For-Three-Days-RXTests */ = {
+			isa = PBXGroup;
+			children = (
+				5AAC7B2A24263C310037AC34 /* Weather_For_Three_Days_RXTests.swift */,
+				5AAC7B2C24263C310037AC34 /* Info.plist */,
+				5AAC7B3224263C550037AC34 /* CitiesViewModelTests.swift */,
+				5A40EDBF2427C1CC003F803C /* CitiesRequestMock.swift */,
+			);
+			path = "Weather-For-Three-Days-RXTests";
+			sourceTree = "<group>";
+		};
 		A1B5A24E69474A6FDBB0E525 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				7EF6246AACF40EBBAB7E388A /* Pods_Weather_For_Three_Days_RX.framework */,
+				32AE76E712E05D193D28A156 /* Pods_Weather_For_Three_Days_RXTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -323,6 +366,25 @@
 			productReference = 5A439BA1242133CC00624293 /* Weather-For-Three-Days-RX.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5AAC7B2724263C310037AC34 /* Weather-For-Three-Days-RXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AAC7B2F24263C310037AC34 /* Build configuration list for PBXNativeTarget "Weather-For-Three-Days-RXTests" */;
+			buildPhases = (
+				BB820AF84F29649B5AE6B382 /* [CP] Check Pods Manifest.lock */,
+				5AAC7B2424263C310037AC34 /* Sources */,
+				5AAC7B2524263C310037AC34 /* Frameworks */,
+				5AAC7B2624263C310037AC34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AAC7B2E24263C310037AC34 /* PBXTargetDependency */,
+			);
+			name = "Weather-For-Three-Days-RXTests";
+			productName = "Weather-For-Three-Days-RXTests";
+			productReference = 5AAC7B2824263C310037AC34 /* Weather-For-Three-Days-RXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -335,6 +397,10 @@
 				TargetAttributes = {
 					5A439BA0242133CC00624293 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					5AAC7B2724263C310037AC34 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 5A439BA0242133CC00624293;
 					};
 				};
 			};
@@ -352,6 +418,7 @@
 			projectRoot = "";
 			targets = (
 				5A439BA0242133CC00624293 /* Weather-For-Three-Days-RX */,
+				5AAC7B2724263C310037AC34 /* Weather-For-Three-Days-RXTests */,
 			);
 		};
 /* End PBXProject section */
@@ -370,6 +437,13 @@
 				5A439BAE242133CE00624293 /* Assets.xcassets in Resources */,
 				5A29BC7E2422472C00874F5B /* HourCollectionViewCell.xib in Resources */,
 				5A29BC842422472C00874F5B /* NextDayTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AAC7B2624263C310037AC34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +483,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Weather-For-Three-Days-RX-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB820AF84F29649B5AE6B382 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Weather-For-Three-Days-RXTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -466,7 +562,6 @@
 				5A439BD02421375200624293 /* Cities.swift in Sources */,
 				5A5570B1242218040096B845 /* UIView+Extension.swift in Sources */,
 				5A29BC812422472C00874F5B /* HourCollectionViewCell.swift in Sources */,
-				5A439BE5242167F400624293 /* Call+Extension.swift in Sources */,
 				5A439BA5242133CC00624293 /* AppDelegate.swift in Sources */,
 				5A439BE32421594300624293 /* RequestCall.swift in Sources */,
 				5A439BA7242133CC00624293 /* SceneDelegate.swift in Sources */,
@@ -474,7 +569,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5AAC7B2424263C310037AC34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A40EDC02427C1CC003F803C /* CitiesRequestMock.swift in Sources */,
+				5AAC7B2B24263C310037AC34 /* Weather_For_Three_Days_RXTests.swift in Sources */,
+				5AAC7B3324263C550037AC34 /* CitiesViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AAC7B2E24263C310037AC34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A439BA0242133CC00624293 /* Weather-For-Three-Days-RX */;
+			targetProxy = 5AAC7B2D24263C310037AC34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5A439BAF242133CE00624293 /* LaunchScreen.storyboard */ = {
@@ -638,6 +751,46 @@
 			};
 			name = Release;
 		};
+		5AAC7B3024263C310037AC34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 792C26F65342811E003DE8B9 /* Pods-Weather-For-Three-Days-RXTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Weather-For-Three-Days-RXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "myCompany.Weather-For-Three-Days-RXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather-For-Three-Days-RX.app/Weather-For-Three-Days-RX";
+			};
+			name = Debug;
+		};
+		5AAC7B3124263C310037AC34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42E5AF98E922B16CBB496543 /* Pods-Weather-For-Three-Days-RXTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Weather-For-Three-Days-RXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "myCompany.Weather-For-Three-Days-RXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather-For-Three-Days-RX.app/Weather-For-Three-Days-RX";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -655,6 +808,15 @@
 			buildConfigurations = (
 				5A439BB6242133CE00624293 /* Debug */,
 				5A439BB7242133CE00624293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AAC7B2F24263C310037AC34 /* Build configuration list for PBXNativeTarget "Weather-For-Three-Days-RXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AAC7B3024263C310037AC34 /* Debug */,
+				5AAC7B3124263C310037AC34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
