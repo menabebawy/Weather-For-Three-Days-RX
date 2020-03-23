@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> aeea3e0ec774f083d4a06728dace057ee2f9ce04
 ## User settings
 xcuserdata/
 
@@ -32,12 +36,18 @@ playground.xcworkspace
 
 .build/
 
+<<<<<<< HEAD
 # CocoaPods
+=======
+>>>>>>> aeea3e0ec774f083d4a06728dace057ee2f9ce04
 Pods/
 
 # Accio dependency management
 Dependencies/
 .accio/
 
+<<<<<<< HEAD
 # Code Injection
+=======
+>>>>>>> aeea3e0ec774f083d4a06728dace057ee2f9ce04
 iOSInjectionProject/
