@@ -1,6 +1,7 @@
 # Weather-For-Three-Days-RX
-![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
-[![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg)]([https://swift.org/)
+[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)](LICENSE)
+[![Swift Version](https://img.shields.io/badge/swift-5.0-orange.svg)]([https://swift.org/)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Endpoints)](POD)  
 
 It allows you to fetch current weather for some static cities around the world and get today forecasts along the next three coming days using [open weather api](https://openweathermap.org/api).
 Using [RxSwift](https://github.com/ReactiveX/RxSwift)
