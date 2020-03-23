@@ -33,7 +33,7 @@ Using [RxSwift](https://github.com/ReactiveX/RxSwift)
 
 ## Networking
 
-Use [Endpoints](https://github.com/tailoredmedia/Endpointsr)
+Use [Endpoints](https://github.com/tailoredmedia/Endpoints)
 
 ## Design patterns
 
