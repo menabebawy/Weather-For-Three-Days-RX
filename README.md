@@ -1,5 +1,5 @@
 # Weather-For-Three-Days-RX
-[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)](LICENSE)
+[![License MIT](https://img.shields.io/github/license/menabebawy/Weather-For-Three-Days-RX)](LICENSE)
 [![Swift Version](https://img.shields.io/badge/swift-5.0-orange.svg)]([https://swift.org/)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Endpoints)](POD)  
 
